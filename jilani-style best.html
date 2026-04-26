@@ -1,0 +1,1465 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jilani Style — Premium Cloth Shop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============ NAV ============ -->
+    <nav>
+      <div class="logo">Jilani <span>Style</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="tel:01558026941" class="contact-nav">📞 01558026941</a>
+        <button class="cart-bubble" onclick="scrollToProducts()">
+          🛍 Cart <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <div class="eyebrow">New Collection 2026</div>
+        <h1 class="hero-h1">Dress with<br /><em>Elegance</em><br />& Style</h1>
+        <p class="hero-p">
+          Chattogram-এর সেরা কাপড়ের দোকান। Panjabi, Shirt, Jeans, T-shirt,
+          Saari, Kameez, Sherwani — সব এক জায়গায়।
+        </p>
+        <div class="hero-btns">
+          <button class="btn-gold" onclick="scrollToProducts()">
+            এখনই কিনুন
+          </button>
+          <a href="tel:01558026941" class="btn-ghost">📞 Call করুন</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <span class="stat-n">800+</span><span class="stat-l">Products</span>
+          </div>
+          <div>
+            <span class="stat-n">50K+</span
+            ><span class="stat-l">Customers</span>
+          </div>
+          <div>
+            <span class="stat-n">100%</span><span class="stat-l">Original</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="h-pattern"></div>
+        <div class="hero-showcase">
+          <div style="position: relative">
+            <div class="sc-card">
+              <span class="sc-badge">NEW</span>
+              <img
+                src="images/hero-showcase.jpg"
+                alt="Premium Panjabi"
+                style="
+                  width: 100%;
+                  height: 160px;
+                  object-fit: cover;
+                  margin-bottom: 0.75rem;
+                "
+                onerror="this.outerHTML = '<span class=\'sc-emoji\'>👘</span>'"
+              />
+              <div class="sc-name">Premium Panjabi</div>
+              <div class="sc-sub">Men's Collection</div>
+            </div>
+            <div class="fp tl">
+              <span class="fp-price">৳ 1,299</span>
+              <span class="fp-nm">Panjabi Set</span>
+            </div>
+            <div class="fp br">
+              <span class="fp-price">৳ 2,499</span>
+              <span class="fp-nm">Kameez Set</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <span class="ticker-item"
+          >ফ্রি ডেলিভারি ৳১৫০০+ অর্ডারে <span class="tdot"></span
+        ></span>
+        <span class="ticker-item"
+          >Eid Special Collection Available <span class="tdot"></span
+        ></span>
+        <span class="ticker-item"
+          >Premium Quality Fabrics <span class="tdot"></span
+        ></span>
+        <span class="ticker-item"
+          >যোগাযোগ: 01558026941 <span class="tdot"></span
+        ></span>
+        <span class="ticker-item"
+          >Jilani Style — Dress Your Best <span class="tdot"></span
+        ></span>
+        <span class="ticker-item"
+          >Easy Exchange Policy <span class="tdot"></span
+        ></span>
+        <span class="ticker-item"
+          >ফ্রি ডেলিভারি ৳১৫০০+ অর্ডারে <span class="tdot"></span
+        ></span>
+        <span class="ticker-item"
+          >Eid Special Collection Available <span class="tdot"></span
+        ></span>
+        <span class="ticker-item"
+          >Premium Quality Fabrics <span class="tdot"></span
+        ></span>
+        <span class="ticker-item"
+          >যোগাযোগ: 01558026941 <span class="tdot"></span
+        ></span>
+        <span class="ticker-item"
+          >Jilani Style — Dress Your Best <span class="tdot"></span
+        ></span>
+        <span class="ticker-item"
+          >Easy Exchange Policy <span class="tdot"></span
+        ></span>
+      </div>
+    </div>
+
+    <!-- ============ CATEGORIES ============ -->
+    <section class="categories" id="categories">
+      <div class="sec-head">
+        <div>
+          <div class="sec-title">Shop by <em>Category</em></div>
+          <div class="sec-sub">সব ধরনের পোশাক এক ছাদের নিচে</div>
+        </div>
+        <a href="#products" class="see-all">সব দেখুন →</a>
+      </div>
+      <div class="cat-grid">
+        <div class="cat-card" onclick="filterProducts('men')">
+          <div class="cat-icon">👔</div>
+          <div class="cat-overlay">
+            <div class="cat-name">Men's Wear</div>
+            <div class="cat-cnt">Panjabi · Shirt · Jeans</div>
+          </div>
+        </div>
+        <div class="cat-card" onclick="filterProducts('women')">
+          <div class="cat-icon">👗</div>
+          <div class="cat-overlay">
+            <div class="cat-name">Women's Wear</div>
+            <div class="cat-cnt">Saari · Kameez · Salwar</div>
+          </div>
+        </div>
+        <div class="cat-card" onclick="filterProducts('occasion')">
+          <div class="cat-icon">✨</div>
+          <div class="cat-overlay">
+            <div class="cat-name">Occasion Wear</div>
+            <div class="cat-cnt">Sherwani · Party Wear</div>
+          </div>
+        </div>
+        <div class="cat-card" onclick="filterProducts('casual')">
+          <div class="cat-icon">👕</div>
+          <div class="cat-overlay">
+            <div class="cat-name">Casual Wear</div>
+            <div class="cat-cnt">T-Shirt · Polo · Casual</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRODUCTS ============ -->
+    <section class="products" id="products">
+      <div class="sec-head">
+        <div>
+          <div class="sec-title">আমাদের <em>Products</em></div>
+          <div class="sec-sub">সেরা মানের পোশাক, সেরা দামে</div>
+        </div>
+      </div>
+
+      <div class="filter-row">
+        <button class="ftab active" onclick="filterProducts('all', this)">
+          সব
+        </button>
+        <button class="ftab" onclick="filterProducts('panjabi', this)">
+          Panjabi
+        </button>
+        <button class="ftab" onclick="filterProducts('shirt', this)">
+          Shirt
+        </button>
+        <button class="ftab" onclick="filterProducts('jeans', this)">
+          Jeans
+        </button>
+        <button class="ftab" onclick="filterProducts('tshirt', this)">
+          T-Shirt
+        </button>
+        <button class="ftab" onclick="filterProducts('polo', this)">
+          Polo Shirt
+        </button>
+        <button class="ftab" onclick="filterProducts('saari', this)">
+          Saari
+        </button>
+        <button class="ftab" onclick="filterProducts('kameez', this)">
+          Kameez
+        </button>
+        <button class="ftab" onclick="filterProducts('sherwani', this)">
+          Sherwani
+        </button>
+      </div>
+
+      <div class="prod-grid" id="prodGrid">
+        <!-- PANJABI -->
+        <div class="prod-card" data-cat="panjabi men">
+          <div class="prod-img">
+            <img
+              src="images/panjabi-white.jpg"
+              alt="Classic White Panjabi"
+              onerror="
+                this.style.display = 'none';
+                this.parentNode.dataset.fallback = '👘';
+              "
+            />
+            <span class="pbadge new-b">NEW</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder(
+                    'Classic White Panjabi',
+                    '👘',
+                    'Panjabi — Men',
+                    1299,
+                  )
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Panjabi — Men</div>
+            <div class="prod-name">Classic White Panjabi</div>
+            <div class="prod-sizes">
+              <span class="sz">S</span><span class="sz">M</span
+              ><span class="sz">L</span><span class="sz">XL</span
+              ><span class="sz">XXL</span>
+            </div>
+            <div class="prod-foot">
+              <span><span class="p-price">৳ 1,299</span></span>
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Classic White Panjabi',
+                    '👘',
+                    'Panjabi — Men',
+                    1299,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-card" data-cat="panjabi men">
+          <div class="prod-img">
+            <img
+              src="images/panjabi-navy.jpg"
+              alt="Embroidered Panjabi Navy"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge hot-b">HOT</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder('Embroidered Panjabi', '🥻', 'Panjabi — Men', 1899)
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Panjabi — Men</div>
+            <div class="prod-name">Embroidered Panjabi — Navy</div>
+            <div class="prod-sizes">
+              <span class="sz">M</span><span class="sz">L</span
+              ><span class="sz">XL</span><span class="sz">XXL</span>
+            </div>
+            <div class="prod-foot">
+              <span
+                ><span class="p-price">৳ 1,899</span
+                ><span class="p-old">৳ 2,200</span></span
+              >
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Embroidered Panjabi — Navy',
+                    '🥻',
+                    'Panjabi — Men',
+                    1899,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHIRT -->
+        <div class="prod-card" data-cat="shirt men">
+          <div class="prod-img">
+            <img
+              src="images/shirt-white.jpg"
+              alt="Oxford Formal Shirt White"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge new-b">NEW</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder('Oxford Formal Shirt', '👔', 'Shirt — Men', 850)
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Shirt — Men</div>
+            <div class="prod-name">Oxford Formal Shirt — White</div>
+            <div class="prod-sizes">
+              <span class="sz">S</span><span class="sz">M</span
+              ><span class="sz">L</span><span class="sz">XL</span>
+            </div>
+            <div class="prod-foot">
+              <span><span class="p-price">৳ 850</span></span>
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Oxford Formal Shirt — White',
+                    '👔',
+                    'Shirt — Men',
+                    850,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-card" data-cat="shirt men">
+          <div class="prod-img">
+            <img
+              src="images/shirt-blue.jpg"
+              alt="Casual Check Shirt Blue"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge sale-b">SALE</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder('Casual Check Shirt', '🔵', 'Shirt — Men', 699)
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Shirt — Men</div>
+            <div class="prod-name">Casual Check Shirt — Blue</div>
+            <div class="prod-sizes">
+              <span class="sz">S</span><span class="sz">M</span
+              ><span class="sz">L</span><span class="sz">XL</span
+              ><span class="sz">XXL</span>
+            </div>
+            <div class="prod-foot">
+              <span
+                ><span class="p-price">৳ 699</span
+                ><span class="p-old">৳ 950</span></span
+              >
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Casual Check Shirt — Blue',
+                    '🔵',
+                    'Shirt — Men',
+                    699,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- JEANS -->
+        <div class="prod-card" data-cat="jeans men">
+          <div class="prod-img">
+            <img
+              src="images/jeans-darkblue.jpg"
+              alt="Slim Fit Jeans Dark Blue"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge hot-b">HOT</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="openOrder('Slim Fit Jeans', '👖', 'Jeans — Men', 1199)"
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Jeans — Men</div>
+            <div class="prod-name">Slim Fit Jeans — Dark Blue</div>
+            <div class="prod-sizes">
+              <span class="sz">30</span><span class="sz">32</span
+              ><span class="sz">34</span><span class="sz">36</span>
+            </div>
+            <div class="prod-foot">
+              <span><span class="p-price">৳ 1,199</span></span>
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Slim Fit Jeans — Dark Blue',
+                    '👖',
+                    'Jeans — Men',
+                    1199,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-card" data-cat="jeans men">
+          <div class="prod-img">
+            <img
+              src="images/jeans-black.jpg"
+              alt="Regular Fit Jeans Black"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge sale-b">SALE</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder('Regular Fit Jeans', '👗', 'Jeans — Men', 999)
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Jeans — Men</div>
+            <div class="prod-name">Regular Fit Jeans — Black</div>
+            <div class="prod-sizes">
+              <span class="sz">30</span><span class="sz">32</span
+              ><span class="sz">34</span><span class="sz">36</span
+              ><span class="sz">38</span>
+            </div>
+            <div class="prod-foot">
+              <span
+                ><span class="p-price">৳ 999</span
+                ><span class="p-old">৳ 1,400</span></span
+              >
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Regular Fit Jeans — Black',
+                    '👗',
+                    'Jeans — Men',
+                    999,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- T-SHIRT -->
+        <div class="prod-card" data-cat="tshirt casual">
+          <div class="prod-img">
+            <img
+              src="images/tshirt-round.jpg"
+              alt="Premium Round Neck T-Shirt"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge new-b">NEW</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder('Premium Round Neck T-Shirt', '👕', 'T-Shirt', 450)
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">T-Shirt</div>
+            <div class="prod-name">Premium Round Neck T-Shirt</div>
+            <div class="prod-sizes">
+              <span class="sz">S</span><span class="sz">M</span
+              ><span class="sz">L</span><span class="sz">XL</span>
+            </div>
+            <div class="prod-foot">
+              <span><span class="p-price">৳ 450</span></span>
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder('Premium Round Neck T-Shirt', '👕', 'T-Shirt', 450)
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-card" data-cat="tshirt casual">
+          <div class="prod-img">
+            <img
+              src="images/tshirt-orange.jpg"
+              alt="Graphic Print T-Shirt Orange"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge hot-b">HOT</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder('Graphic Print T-Shirt', '🧡', 'T-Shirt', 550)
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">T-Shirt</div>
+            <div class="prod-name">Graphic Print T-Shirt — Orange</div>
+            <div class="prod-sizes">
+              <span class="sz">S</span><span class="sz">M</span
+              ><span class="sz">L</span><span class="sz">XL</span
+              ><span class="sz">XXL</span>
+            </div>
+            <div class="prod-foot">
+              <span><span class="p-price">৳ 550</span></span>
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Graphic Print T-Shirt — Orange',
+                    '🧡',
+                    'T-Shirt',
+                    550,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- POLO SHIRT -->
+        <div class="prod-card" data-cat="polo casual men">
+          <div class="prod-img">
+            <img
+              src="images/polo-green.jpg"
+              alt="Classic Polo Shirt Green"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge new-b">NEW</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder('Classic Polo Shirt', '🟢', 'Polo Shirt', 750)
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Polo Shirt</div>
+            <div class="prod-name">Classic Polo Shirt — Green</div>
+            <div class="prod-sizes">
+              <span class="sz">S</span><span class="sz">M</span
+              ><span class="sz">L</span><span class="sz">XL</span>
+            </div>
+            <div class="prod-foot">
+              <span><span class="p-price">৳ 750</span></span>
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Classic Polo Shirt — Green',
+                    '🟢',
+                    'Polo Shirt',
+                    750,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-card" data-cat="polo casual men">
+          <div class="prod-img">
+            <img
+              src="images/polo-red.jpg"
+              alt="Premium Polo Shirt Red"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge sale-b">SALE</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder('Premium Polo Shirt', '🔴', 'Polo Shirt', 650)
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Polo Shirt</div>
+            <div class="prod-name">Premium Polo Shirt — Red</div>
+            <div class="prod-sizes">
+              <span class="sz">M</span><span class="sz">L</span
+              ><span class="sz">XL</span><span class="sz">XXL</span>
+            </div>
+            <div class="prod-foot">
+              <span
+                ><span class="p-price">৳ 650</span
+                ><span class="p-old">৳ 900</span></span
+              >
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder('Premium Polo Shirt — Red', '🔴', 'Polo Shirt', 650)
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAARI -->
+        <div class="prod-card" data-cat="saari women">
+          <div class="prod-img">
+            <img
+              src="images/saari-pink.jpg"
+              alt="Silk Jamdani Saari Pink"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge new-b">NEW</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder('Silk Jamdani Saari', '🪷', 'Saari — Women', 3499)
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Saari — Women</div>
+            <div class="prod-name">Silk Jamdani Saari — Pink</div>
+            <div class="prod-sizes">
+              <span class="sz">Free Size</span>
+            </div>
+            <div class="prod-foot">
+              <span><span class="p-price">৳ 3,499</span></span>
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Silk Jamdani Saari — Pink',
+                    '🪷',
+                    'Saari — Women',
+                    3499,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-card" data-cat="saari women">
+          <div class="prod-img">
+            <img
+              src="images/saari-floral.jpg"
+              alt="Cotton Printed Saari Floral"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge hot-b">HOT</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder('Cotton Printed Saari', '🌸', 'Saari — Women', 1899)
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Saari — Women</div>
+            <div class="prod-name">Cotton Printed Saari — Floral</div>
+            <div class="prod-sizes">
+              <span class="sz">Free Size</span>
+            </div>
+            <div class="prod-foot">
+              <span
+                ><span class="p-price">৳ 1,899</span
+                ><span class="p-old">৳ 2,400</span></span
+              >
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Cotton Printed Saari — Floral',
+                    '🌸',
+                    'Saari — Women',
+                    1899,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- KAMEEZ -->
+        <div class="prod-card" data-cat="kameez women">
+          <div class="prod-img">
+            <img
+              src="images/kameez-rose.jpg"
+              alt="Embroidered Kameez Set Rose"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge new-b">NEW</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder(
+                    'Embroidered Kameez Set',
+                    '👒',
+                    'Kameez — Women',
+                    2299,
+                  )
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Kameez — Women</div>
+            <div class="prod-name">Embroidered Kameez Set — Rose</div>
+            <div class="prod-sizes">
+              <span class="sz">S</span><span class="sz">M</span
+              ><span class="sz">L</span><span class="sz">XL</span>
+            </div>
+            <div class="prod-foot">
+              <span><span class="p-price">৳ 2,299</span></span>
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Embroidered Kameez Set — Rose',
+                    '👒',
+                    'Kameez — Women',
+                    2299,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-card" data-cat="kameez women">
+          <div class="prod-img">
+            <img
+              src="images/kameez-purple.jpg"
+              alt="Lawn Kameez 3 Piece Purple"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge sale-b">SALE</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder(
+                    'Lawn Kameez — 3 Piece',
+                    '💜',
+                    'Kameez — Women',
+                    1699,
+                  )
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Kameez — Women</div>
+            <div class="prod-name">Lawn Kameez 3 Piece — Purple</div>
+            <div class="prod-sizes">
+              <span class="sz">S</span><span class="sz">M</span
+              ><span class="sz">L</span><span class="sz">XL</span
+              ><span class="sz">XXL</span>
+            </div>
+            <div class="prod-foot">
+              <span
+                ><span class="p-price">৳ 1,699</span
+                ><span class="p-old">৳ 2,100</span></span
+              >
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Lawn Kameez 3 Piece — Purple',
+                    '💜',
+                    'Kameez — Women',
+                    1699,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHERWANI -->
+        <div class="prod-card" data-cat="sherwani occasion men">
+          <div class="prod-img">
+            <img
+              src="images/sherwani-charcoal.jpg"
+              alt="Royal Sherwani Charcoal"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge new-b">NEW</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder(
+                    'Royal Sherwani — Charcoal',
+                    '🤵',
+                    'Sherwani — Men',
+                    5999,
+                  )
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Sherwani — Men</div>
+            <div class="prod-name">Royal Sherwani — Charcoal</div>
+            <div class="prod-sizes">
+              <span class="sz">M</span><span class="sz">L</span
+              ><span class="sz">XL</span><span class="sz">XXL</span>
+            </div>
+            <div class="prod-foot">
+              <span><span class="p-price">৳ 5,999</span></span>
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Royal Sherwani — Charcoal',
+                    '🤵',
+                    'Sherwani — Men',
+                    5999,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-card" data-cat="sherwani occasion men">
+          <div class="prod-img">
+            <img
+              src="images/sherwani-cream.jpg"
+              alt="Embroidered Sherwani Cream"
+              onerror="this.style.display = 'none'"
+            />
+            <span class="pbadge hot-b">HOT</span>
+            <div class="prod-hover-actions">
+              <button
+                class="qbuy"
+                onclick="
+                  openOrder(
+                    'Embroidered Sherwani — Cream',
+                    '🥇',
+                    'Sherwani — Men',
+                    7499,
+                  )
+                "
+              >
+                এখনই কিনুন
+              </button>
+            </div>
+          </div>
+          <div class="prod-body">
+            <div class="prod-cat">Sherwani — Men</div>
+            <div class="prod-name">Embroidered Sherwani — Cream</div>
+            <div class="prod-sizes">
+              <span class="sz">M</span><span class="sz">L</span
+              ><span class="sz">XL</span>
+            </div>
+            <div class="prod-foot">
+              <span
+                ><span class="p-price">৳ 7,499</span
+                ><span class="p-old">৳ 9,000</span></span
+              >
+              <button
+                class="buy-now"
+                onclick="
+                  openOrder(
+                    'Embroidered Sherwani — Cream',
+                    '🥇',
+                    'Sherwani — Men',
+                    7499,
+                  )
+                "
+              >
+                কিনুন
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /prod-grid -->
+    </section>
+
+    <!-- ============ PROMO ============ -->
+    <section class="promo" id="sale">
+      <div class="promo-inner">
+        <div>
+          <div class="promo-tag">সীমিত সময়ের অফার</div>
+          <div class="promo-h">Eid Special<br /><em>Collection ২০২৬</em></div>
+          <div class="promo-p">
+            নির্বাচিত পোশাকে ৩০% ছাড়। সারা সপ্তাহ ফ্রি ডেলিভারি।
+          </div>
+          <button
+            class="btn-gold"
+            onclick="
+              filterProducts('all');
+              scrollToProducts();
+            "
+          >
+            Sale দেখুন
+          </button>
+        </div>
+        <div class="promo-bg-txt">EID</div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testimonials">
+      <div class="sec-head">
+        <div>
+          <div class="sec-title">আমাদের <em>Customers</em></div>
+          <div class="sec-sub">তারা কী বলছেন</div>
+        </div>
+      </div>
+      <div class="test-grid">
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <div class="test-txt">
+            "Jilani Style থেকে Panjabi কিনলাম, কোয়ালিটি অসাধারণ! দাম একদম
+            পরিষ্কার, ডেলিভারি দ্রুত।"
+          </div>
+          <div class="test-author">
+            <div class="t-av">RM</div>
+            <div>
+              <div class="t-name">Rahim Uddin</div>
+              <div class="t-city">Chattogram</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <div class="test-txt">
+            "Sherwani টা পেয়ে অবাক হয়ে গেলাম — এত সুন্দর! বিয়েতে সবাই প্রশংসা
+            করলো।"
+          </div>
+          <div class="test-author">
+            <div class="t-av">KA</div>
+            <div>
+              <div class="t-name">Karim Ahmed</div>
+              <div class="t-city">Comilla</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="stars">★★★★★</div>
+          <div class="test-txt">
+            "Saari-র কোয়ালিটি দেখে মুগ্ধ! এই দামে এত ভালো কাপড় আর কোথাও
+            পাইনি।"
+          </div>
+          <div class="test-author">
+            <div class="t-av">FN</div>
+            <div>
+              <div class="t-name">Fatema Noor</div>
+              <div class="t-city">Dhaka</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact-section" id="contact">
+      <div class="sec-head">
+        <div>
+          <div class="sec-title">আমাদের সাথে <em>যোগাযোগ</em></div>
+          <div class="sec-sub">যেকোনো প্রশ্ন বা অর্ডারের জন্য কল করুন</div>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="ci-row">
+            <span class="ci-icon">📞</span>
+            <div>
+              <div class="ci-label">Phone / WhatsApp</div>
+              <div class="ci-val gold">01558026941</div>
+            </div>
+          </div>
+          <div class="ci-row">
+            <span class="ci-icon">🏪</span>
+            <div>
+              <div class="ci-label">Shop Name</div>
+              <div class="ci-val">Jilani Style</div>
+            </div>
+          </div>
+          <div class="ci-row">
+            <span class="ci-icon">📍</span>
+            <div>
+              <div class="ci-label">Location</div>
+              <div class="ci-val">Chattogram, Bangladesh</div>
+            </div>
+          </div>
+          <div class="ci-row">
+            <span class="ci-icon">⏰</span>
+            <div>
+              <div class="ci-label">Opening Hours</div>
+              <div class="ci-val">সকাল ৯টা — রাত ১০টা (প্রতিদিন)</div>
+            </div>
+          </div>
+          <div class="ci-row">
+            <span class="ci-icon">🚚</span>
+            <div>
+              <div class="ci-label">Delivery</div>
+              <div class="ci-val">সারা বাংলাদেশে ডেলিভারি</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <div class="map-icon">📍</div>
+          <div class="map-txt">Chattogram, Bangladesh</div>
+          <a href="https://wa.me/8801558026941" target="_blank">
+            <button class="btn-gold" style="margin-top: 1rem">
+              WhatsApp করুন
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Jilani <span>Style</span></div>
+          <div class="footer-desc">
+            Chattogram-এর সেরা কাপড়ের দোকান। সেরা মানের পোশাক, সেরা দামে। আপনার
+            পরিবারের জন্য সেরাটাই দিতে চাই।
+          </div>
+          <div class="footer-ph">📞 01558026941</div>
+        </div>
+        <div>
+          <div class="f-col-title">Categories</div>
+          <ul class="f-links">
+            <li><a href="#" onclick="filterProducts('panjabi')">Panjabi</a></li>
+            <li><a href="#" onclick="filterProducts('shirt')">Shirt</a></li>
+            <li><a href="#" onclick="filterProducts('jeans')">Jeans</a></li>
+            <li><a href="#" onclick="filterProducts('tshirt')">T-Shirt</a></li>
+            <li><a href="#" onclick="filterProducts('polo')">Polo Shirt</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="f-col-title">Women's</div>
+          <ul class="f-links">
+            <li><a href="#" onclick="filterProducts('saari')">Saari</a></li>
+            <li><a href="#" onclick="filterProducts('kameez')">Kameez</a></li>
+            <li>
+              <a href="#" onclick="filterProducts('occasion')">Occasion Wear</a>
+            </li>
+            <li>
+              <a href="#" onclick="filterProducts('sherwani')">Sherwani</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="f-col-title">Info</div>
+          <ul class="f-links">
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Delivery Info</a></li>
+            <li><a href="tel:01558026941">Call: 01558026941</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="f-copy">
+          © 2026 Jilani Style. All rights reserved. Chattogram, Bangladesh.
+        </div>
+        <div class="pay-badges">
+          <span class="pbdg">bKash</span>
+          <span class="pbdg">Nagad</span>
+          <span class="pbdg">Cash</span>
+          <span class="pbdg">COD</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ ORDER MODAL ============ -->
+    <div class="modal-overlay" id="orderModal">
+      <div class="modal">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+
+        <!-- ORDER FORM -->
+        <div id="orderForm">
+          <div class="modal-title">অর্ডার করুন</div>
+          <div class="modal-sub">
+            নিচের তথ্য পূরণ করুন — আমরা শীঘ্রই যোগাযোগ করবো।
+          </div>
+
+          <div class="modal-prod-row">
+            <div class="modal-emoji" id="mEmoji">👘</div>
+            <div>
+              <div class="modal-pname" id="mName">Product Name</div>
+              <div class="modal-pcat" id="mCat">Category</div>
+            </div>
+          </div>
+
+          <!-- QUANTITY -->
+          <div class="qty-row">
+            <span class="qty-label">পরিমাণ</span>
+            <button class="qty-btn" onclick="changeQty(-1)">−</button>
+            <input
+              type="number"
+              class="qty-num"
+              id="qtyInput"
+              value="1"
+              min="1"
+              max="20"
+              onchange="updateTotal()"
+            />
+            <button class="qty-btn" onclick="changeQty(1)">+</button>
+          </div>
+
+          <!-- TOTAL -->
+          <div class="total-row">
+            <span class="total-label">মোট মূল্য</span>
+            <span class="total-amt" id="totalAmt">৳ 0</span>
+          </div>
+
+          <!-- SIZE -->
+          <div class="form-group">
+            <label class="form-label">সাইজ বেছে নিন</label>
+            <select class="form-input" id="sizeInput">
+              <option value="">-- সাইজ বেছে নিন --</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>XXL</option>
+              <option>30</option>
+              <option>32</option>
+              <option>34</option>
+              <option>36</option>
+              <option>38</option>
+              <option>Free Size</option>
+            </select>
+          </div>
+
+          <!-- CUSTOMER NAME -->
+          <div class="form-group">
+            <label class="form-label">আপনার নাম</label>
+            <input
+              type="text"
+              class="form-input"
+              id="custName"
+              placeholder="আপনার পুরো নাম লিখুন"
+            />
+          </div>
+
+          <!-- PHONE -->
+          <div class="form-group">
+            <label class="form-label">মোবাইল নম্বর</label>
+            <input
+              type="tel"
+              class="form-input"
+              id="custPhone"
+              placeholder="01XXXXXXXXX"
+            />
+          </div>
+
+          <!-- ADDRESS -->
+          <div class="form-group">
+            <label class="form-label">ডেলিভারি ঠিকানা</label>
+            <textarea
+              class="form-input"
+              id="custAddress"
+              placeholder="বাড়ি নম্বর, রাস্তা, এলাকা, জেলা..."
+              rows="3"
+            ></textarea>
+          </div>
+
+          <!-- SHOP CONTACT -->
+          <div class="shop-contact">
+            <span class="shop-contact-icon">📞</span>
+            <div>
+              <div class="sc-text">প্রশ্ন থাকলে সরাসরি কল করুন</div>
+              <div class="sc-num">01558026941</div>
+            </div>
+          </div>
+
+          <button class="confirm-btn" onclick="confirmOrder()">
+            ✅ অর্ডার কনফার্ম করুন
+          </button>
+        </div>
+
+        <!-- SUCCESS SCREEN -->
+        <div class="success-screen" id="successScreen">
+          <span class="success-icon">🎉</span>
+          <div class="success-title">অর্ডার সফল হয়েছে!</div>
+          <div class="success-msg">
+            আপনার অর্ডার পেয়েছি। আমরা শীঘ্রই
+            <strong style="color: var(--gold)">01558026941</strong> নম্বর থেকে
+            যোগাযোগ করবো।
+          </div>
+
+          <div class="success-order" id="successDetails"></div>
+
+          <a href="https://wa.me/8801558026941" target="_blank">
+            <button class="whatsapp-btn">💬 WhatsApp-এ যোগাযোগ করুন</button>
+          </a>
+          <button class="back-btn" onclick="closeModal()">
+            আরো কেনাকাটা করুন
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ JS ============ -->
+    <script>
+      let currentProduct = {};
+      let cartCount = 0;
+
+      function scrollToProducts() {
+        document
+          .getElementById("products")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+      function filterProducts(cat, btn) {
+        const cards = document.querySelectorAll(".prod-card");
+        cards.forEach((c) => {
+          const cats = c.dataset.cat || "";
+          if (cat === "all" || cats.includes(cat)) {
+            c.classList.remove("hidden");
+          } else {
+            c.classList.add("hidden");
+          }
+        });
+
+        document
+          .querySelectorAll(".ftab")
+          .forEach((t) => t.classList.remove("active"));
+        if (btn) btn.classList.add("active");
+        else {
+          document.querySelectorAll(".ftab").forEach((t) => {
+            if (t.textContent.trim() === "সব") t.classList.add("active");
+          });
+        }
+
+        if (cat !== "all") {
+          document
+            .getElementById("products")
+            .scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      function openOrder(name, emoji, cat, price) {
+        currentProduct = { name, emoji, cat, price };
+        document.getElementById("mName").textContent = name;
+        document.getElementById("mEmoji").textContent = emoji;
+        document.getElementById("mCat").textContent = cat;
+        document.getElementById("qtyInput").value = 1;
+        updateTotal();
+        document.getElementById("orderForm").style.display = "block";
+        document.getElementById("successScreen").style.display = "none";
+        document.getElementById("custName").value = "";
+        document.getElementById("custPhone").value = "";
+        document.getElementById("custAddress").value = "";
+        document.getElementById("sizeInput").value = "";
+        document.getElementById("orderModal").classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        document.getElementById("orderModal").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      function changeQty(d) {
+        const input = document.getElementById("qtyInput");
+        let v = parseInt(input.value) + d;
+        if (v < 1) v = 1;
+        if (v > 20) v = 20;
+        input.value = v;
+        updateTotal();
+      }
+
+      function updateTotal() {
+        const qty = parseInt(document.getElementById("qtyInput").value) || 1;
+        const total = currentProduct.price * qty;
+        document.getElementById("totalAmt").textContent =
+          "৳ " + total.toLocaleString("bn-BD");
+      }
+
+      function confirmOrder() {
+        const name = document.getElementById("custName").value.trim();
+        const phone = document.getElementById("custPhone").value.trim();
+        const address = document.getElementById("custAddress").value.trim();
+        const size = document.getElementById("sizeInput").value;
+        const qty = parseInt(document.getElementById("qtyInput").value) || 1;
+        const total = currentProduct.price * qty;
+
+        if (!name) {
+          alert("আপনার নাম লিখুন।");
+          return;
+        }
+        if (!phone || phone.length < 10) {
+          alert("সঠিক মোবাইল নম্বর লিখুন।");
+          return;
+        }
+        if (!address) {
+          alert("ডেলিভারি ঠিকানা লিখুন।");
+          return;
+        }
+        if (!size) {
+          alert("সাইজ বেছে নিন।");
+          return;
+        }
+
+        // Generate order ID
+        const orderId = "JS-" + Date.now().toString().slice(-6);
+
+        // Build success details
+        const details = `
+    <div class="so-row"><span class="so-key">Order ID</span><span class="so-val gold">${orderId}</span></div>
+    <div class="so-row"><span class="so-key">পণ্য</span><span class="so-val">${currentProduct.emoji} ${currentProduct.name}</span></div>
+    <div class="so-row"><span class="so-key">সাইজ</span><span class="so-val">${size}</span></div>
+    <div class="so-row"><span class="so-key">পরিমাণ</span><span class="so-val">${qty} টি</span></div>
+    <div class="so-row"><span class="so-key">মোট মূল্য</span><span class="so-val gold">৳ ${total.toLocaleString()}</span></div>
+    <div class="so-row"><span class="so-key">নাম</span><span class="so-val">${name}</span></div>
+    <div class="so-row"><span class="so-key">মোবাইল</span><span class="so-val">${phone}</span></div>
+    <div class="so-row"><span class="so-key">ঠিকানা</span><span class="so-val">${address}</span></div>
+    <div class="so-row"><span class="so-key">যোগাযোগ</span><span class="so-val gold">01558026941</span></div>
+  `;
+
+        document.getElementById("successDetails").innerHTML = details;
+        document.getElementById("orderForm").style.display = "none";
+        document.getElementById("successScreen").style.display = "block";
+
+        // Update cart count
+        cartCount += qty;
+        document.getElementById("cartCount").textContent = cartCount;
+
+        // Update WhatsApp link with order info
+        const waMsg = encodeURIComponent(
+          `🛍 নতুন অর্ডার — Jilani Style\n` +
+            `Order ID: ${orderId}\n` +
+            `পণ্য: ${currentProduct.name}\n` +
+            `সাইজ: ${size}\n` +
+            `পরিমাণ: ${qty} টি\n` +
+            `মোট: ৳${total}\n` +
+            `নাম: ${name}\n` +
+            `মোবাইল: ${phone}\n` +
+            `ঠিকানা: ${address}`,
+        );
+
+        const waBtn = document.querySelector(".whatsapp-btn");
+        waBtn.onclick = () =>
+          window.open(`https://wa.me/8801558026941?text=${waMsg}`, "_blank");
+      }
+
+      // Close modal on overlay click
+      document
+        .getElementById("orderModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) closeModal();
+        });
+
+      // QtyInput update
+      document
+        .getElementById("qtyInput")
+        .addEventListener("input", updateTotal);
+    </script>
+  </body>
+</html>
